@@ -1,7 +1,6 @@
 //dependencies
 const express = require("express");
 const http = require("http");
-const app = express();
 
 //express app
 const app = express();
@@ -25,7 +24,7 @@ app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
 
-//Servers
+//servers
 function serverRequest(request, response) {
 
     fs.readFile(__dirname + "/index.html", function(err, data) {
@@ -42,6 +41,17 @@ function serverRequest(request, response) {
   
 
 //Routing
+app.get("/", function(req, res) {
+  res.send("");
+});
+
+app.get("/", function(req, res) {
+  res.json();
+});
+
+app.get("/", function(req, res) {
+  res.json();
+});
 
 //APIs
 
